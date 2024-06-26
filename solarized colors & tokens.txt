@@ -37,19 +37,21 @@ base3 - bg
 [✔] constant.language.boolean -> cyan
 
 [✔][✔] constant.language | variable.defaultLibrary -> orange  (workspace, math, etc)
-[✔][✔] support.function | function.defaultLibrary -> orange  (type(), typeof(), pcall())
+[✔][✔][✔] support.function | function.defaultLibrary | method.defaultLibrary -> orange (type(), typeof(), pcall(), etc)
+[✔][✔] support.class | class.defaultLibrary -> orange (CFrame, Instance, etc)
 
 [✔] keyword -> yellow 
+[✔] keyword.operator.logical -> yellow (and, not)
 [✔] storage.modifier.local -> yellow  (literally 'local' keyword)
 [✔] storage.type -> yellow (literally 'type' keyword) 
 
-[✔] keyword.operator.type -> base0
-[✔] keyword.operator.assignment -> base0
-[✔] keyword.operator.arithmetic -> base0
+[✔] keyword.operator.type -> base0 ( ::, <>, :)
+[✔] keyword.operator.assignment -> base0 ( = )
+[✔] keyword.operator.arithmetic -> base0 ( +, =, /, etc )
 [✔] keyword.operator -> base0
 
-[✔][✔] entity.name.type | type -> violet  (name of a type) 
-[✔][✔][✔] entity.name.function | function | method -> blue
+[✔][✔] entity.name.type | type -> violet (name of a type) 
+[✔][✔][✔] entity.name.function | function | method -> blue (name of a function or method)
 [✔][✔] variable.parameter | parameter -> magenta
 
 [✔][✔] variable.other.property | property -> cyan

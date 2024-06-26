@@ -145,6 +145,7 @@
 		{
 			"scope": [
 				"keyword",
+				"keyword.operator.logical",
 				"storage.modifier.local",
 				"storage.type"
 			],
@@ -296,7 +297,7 @@
 				"support.class"
 			],
 			"settings": {
-				"foreground": "#859900"
+				"foreground": "#cb4b16"
 			}
 		},
 		{
@@ -445,5 +446,7 @@
 		"property": "#2aa198",
 		"variable.defaultLibrary": "#cb4b16",
 		"function.defaultLibrary": "#cb4b16",
+		"method.defaultLibrary": "#cb4b16",
+		"class.defaultLibrary": "#cb4b16",
 	}
 }
