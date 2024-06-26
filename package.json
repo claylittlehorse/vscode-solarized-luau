@@ -2,6 +2,10 @@
   "name": "solarized-luau",
   "displayName": "Solarized Luau",
   "description": "Solarized theme modified to look nice with luau-lsp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crossstarcross/vscode-solarized-luau.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.90.0"
@@ -14,12 +18,12 @@
       {
         "label": "Solarized Luau Light",
         "uiTheme": "vs",
-        "path": "./themes/solarized-luau-light"
+        "path": "./themes/solarized-luau-light.json"
       },
       {
         "label": "Solarized Luau Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/solarized-luau-dark"
+        "path": "./themes/solarized-luau-dark.json"
       }
     ]
   }
