@@ -481,7 +481,7 @@
 		"function": "#cb4b16",
 		"method": "#cb4b16",
 		"*.defaultLibrary": "#d33682",
-		"method.defaultLibrary": { "foreground": "#b58900", "fontStyle": "" }, // Methods on global constants (i.e. game:GetService())
+		//"method.defaultLibrary": "#d33682", // Methods on global constants (i.e. game:GetService())
 		// "variable.defaultLibrary": "#d33682", // Global constants (i.e. math)
 		// "function.defaultLibrary": "#d33682", // Functions on global constants (i.e. math.noise)
 		// "class.defaultLibrary": "#d33682", // UserData constants (CFrame, Vector3, Instance, etc)
