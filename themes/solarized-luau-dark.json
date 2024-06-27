@@ -97,6 +97,111 @@
 		"titleBar.activeBackground": "#002c39",
 	},
 	"tokenColors": [
+		// Luau specific below
+
+			// Primitives
+			{  
+				"scope": "string", // Strings
+				"settings": {
+					"foreground": "#859900" // Green
+				}
+			},
+			{
+				"scope": "constant.numeric", // Numbers
+				"settings": {
+					"foreground": "#268bd2" // Blue
+				}
+			},
+			{ 
+				"scope": "constant.language.boolean", // Booleans
+				"settings": {
+					"foreground": "#2aa198" // Cyan
+				}
+			},
+
+			// Gloabals & built in libraries
+			{
+				"scope": [
+					"constant.language", // Global constants (i.e. game)
+					"support.constant", // Some global constants (i.e. math)
+					"support.function", // Global functions (i.e. typeof())
+				],
+				"settings": {
+					"foreground": "#cb4b16" // Orange
+				}
+			},
+
+			// Keywords
+			{
+				"scope": [
+					"keyword",
+					"storage.modifier.local", // "local" keyword
+					"storage.type", // "type" keyword
+					"keyword.operator.wordlike", // Logical operators (and, or, not)
+				],
+				"settings": {
+					"foreground": "#b58900",
+				}
+			},
+
+
+			// Operators
+			{
+				"scope": [
+					"keyword.operator",
+					"keyword.operator.type",
+					"keyword.operator.typecast",
+					"keyword.operator.assignment",
+					"keyword.operator.arithmetic",
+				],
+				"settings": {
+					"foreground": "#839496" // Body (#839496 dark, #657b83 light)
+				}
+			},
+
+			//Types
+			{
+				"scope": [
+					"entity.name.type",
+					"support.type.primitive",
+				],
+				"settings": {
+					"foreground": "#6c71c4", 
+					"fontStyle": ""
+				}
+			},
+
+			//Functions
+			{
+				"scope": "entity.name.function",
+				"settings": {
+					"foreground": "#268bd2"
+				}
+			},
+			{
+				"scope": "variable.parameter",
+				"settings": {
+					"foreground": "#d33682"
+				}
+			},
+
+			{
+				"scope": "variable.other.property", // Property
+				"settings": {
+					"foreground": "#2aa198"
+				}
+			},
+
+
+
+		{
+			"scope": [
+				"meta.preprocessor"
+			],
+			"settings": {
+				"foreground": "#cb4b16" // Orange
+			}
+		},
 		{
 			"scope": [
 				"meta.embedded",
@@ -116,21 +221,9 @@
 			}
 		},
 		{
-			"scope": "string",
-			"settings": {
-				"foreground": "#859900"
-			}
-		},
-		{
 			"scope": "string.regexp",
 			"settings": {
 				"foreground": "#dc322f"
-			}
-		},
-		{
-			"scope": "constant.numeric",
-			"settings": {
-				"foreground": "#268bd2"
 			}
 		},
 		{
@@ -144,54 +237,13 @@
 		},
 		{
 			"scope": [
-				"keyword",
-				"keyword.operator.logical",
-				"storage.modifier.local",
-				"storage.type"
-			],
-			"settings": {
-				"foreground": "#b58900"
-			}
-		},
-		{
-			"scope": [
-				"keyword.operator.type",
-				"keyword.operator.assignment",
-				"keyword.operator.arithmetic",
-				"keyword.operator",
-			],
-			"settings": {
-				"foreground": "#839496"
-			}
-		},
-		{
-			"scope": [
 				"entity.name.class",
-				"entity.name.type",
 				"entity.name.namespace",
 				"entity.name.scope-resolution"
 			],
 			"settings": {
-				"foreground": "#6c71c4",
+				"foreground": "#268bd2", 
 				"fontStyle": ""
-			}
-		},
-		{
-			"scope": "entity.name.function",
-			"settings": {
-				"foreground": "#268bd2"
-			}
-		},
-		{
-			"scope": "variable.parameter",
-			"settings": {
-				"foreground": "#d33682"
-			}
-		},
-		{
-			"scope": "variable.other.property",
-			"settings": {
-				"foreground": "#2aa198"
 			}
 		},
 		{
@@ -207,23 +259,6 @@
 			],
 			"settings": {
 				"foreground": "#dc322f"
-			}
-		},
-		{
-			"scope": [
-				"constant.language.boolean",
-			],
-			"settings": {
-				"foreground": "#2aa198"
-			}
-		},
-		{
-			"scope": [
-				"constant.language",
-				"meta.preprocessor"
-			],
-			"settings": {
-				"foreground": "#cb4b16"
 			}
 		},
 		{
@@ -251,10 +286,6 @@
 			}
 		},
 		{
-			"scope": "variable.parameter",
-			"settings": {}
-		},
-		{
 			"scope": "entity.name.tag",
 			"settings": {
 				"foreground": "#268bd2"
@@ -273,12 +304,6 @@
 			}
 		},
 		{
-			"scope": "support.function",
-			"settings": {
-				"foreground": "#cb4b16"
-			}
-		},
-		{
 			"scope": "punctuation.separator.continuation",
 			"settings": {
 				"foreground": "#dc322f"
@@ -286,7 +311,6 @@
 		},
 		{
 			"scope": [
-				"support.constant",
 				"support.variable"
 			],
 			"settings": {}
@@ -440,13 +464,14 @@
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
 		"type": "#6c71c4",
-		"function": "#268bd2",
-		"method": "#268bd2",
 		"parameter": "#d33682",
 		"property": "#2aa198",
-		"variable.defaultLibrary": "#cb4b16",
-		"function.defaultLibrary": "#cb4b16",
-		"method.defaultLibrary": "#cb4b16",
-		"class.defaultLibrary": "#cb4b16",
+		"function": "#268bd2",
+		"method": "#268bd2",
+		"*.defaultLibrary": "#cb4b16",
+		// "variable.defaultLibrary": "#cb4b16", // Global constants (i.e. math)
+		// "function.defaultLibrary": "#cb4b16", // Functions on global constants (i.e. math.noise)
+		// "method.defaultLibrary": "#cb4b16", // Methods on global constants (i.e. game:GetService())
+		// "class.defaultLibrary": "#cb4b16", // UserData constants (CFrame, Vector3, Instance, etc)
 	}
 }
