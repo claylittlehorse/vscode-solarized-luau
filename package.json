@@ -1,7 +1,7 @@
 {
   "name": "solarized-luau",
   "displayName": "Solarized Luau",
-  "description": "Solarized theme modified to look nice with luau-lsp",
+  "description": "Solarized theme specifically configured for use with luau-lsp",
   "repository": {
     "type": "git",
     "url": "https://github.com/crossstarcross/vscode-solarized-luau.git"
