@@ -20,9 +20,12 @@
 		"editor.selectionHighlightBackground": "#dfca88aa",
 		"editor.wordHighlightBackground": "#eee8d5aa",
 		"editor.wordHighlightStrongBackground": "#dfca88aa",
-		"editorBracketHighlight.foreground1": "#859900",
-		"editorBracketHighlight.foreground2": "#268bd2",
+		"editorBracketHighlight.foreground1": "#268bd2",
+		"editorBracketHighlight.foreground2": "#b58900",
 		"editorBracketHighlight.foreground3": "#cb4b16",
+		"editorBracketHighlight.foreground4": "#2aa198",
+		"editorBracketHighlight.foreground5": "#859900",
+		"editorBracketHighlight.foreground6": "#d33682",
 		"editorCursor.foreground": "#657b83",
 		"editorGroup.border": "#ddd6c1",
 		"editorGroup.dropBackground": "#ddd6c1aa",
@@ -107,13 +110,20 @@
 			{
 				"scope": "constant.numeric", // Numbers
 				"settings": {
-					"foreground": "#268bd2" // Blue
+					"foreground": "#b58900", // Yellow
+					"fontStyle": "bold" // Bold for light theme
 				}
 			},
 			{ 
 				"scope": "constant.language.boolean", // Booleans
 				"settings": {
-					"foreground": "#2aa198" // Cyan
+					"foreground": "#cb4b16" // Orange
+				}
+			},
+			{ 
+				"scope": "constant.language.nil", // nil
+				"settings": {
+					"foreground": "#cb4b16" // Orange
 				}
 			},
 
@@ -125,7 +135,7 @@
 					"support.function", // Global functions (i.e. typeof())
 				],
 				"settings": {
-					"foreground": "#cb4b16" // Orange
+					"foreground": "#d33682" // Magenta
 				}
 			},
 
@@ -138,8 +148,8 @@
 					"keyword.operator.wordlike", // Logical operators (and, or, not)
 				],
 				"settings": {
-					"foreground": "#b58900",
-					"fontStyle": "bold"
+					"foreground": "#b58900", // Yellow
+					"fontStyle": "bold" // Bold for light theme
 				}
 			},
 
@@ -151,6 +161,7 @@
 					"keyword.operator.type",
 					"keyword.operator.typecast",
 					"keyword.operator.assignment",
+					"keyword.operator.comparison",
 					"keyword.operator.arithmetic",
 				],
 				"settings": {
@@ -165,7 +176,7 @@
 					"support.type.primitive",
 				],
 				"settings": {
-					"foreground": "#6c71c4", 
+					"foreground": "#6c71c4", // Violet
 					"fontStyle": ""
 				}
 			},
@@ -174,20 +185,20 @@
 			{
 				"scope": "entity.name.function",
 				"settings": {
-					"foreground": "#268bd2"
+					"foreground": "#cb4b16" // Orange
 				}
 			},
-			{
-				"scope": "variable.parameter",
-				"settings": {
-					"foreground": "#d33682"
-				}
-			},
+			// {
+			// 	"scope": "variable.parameter",
+			// 	"settings": {
+			// 		"foreground": "#d33682"
+			// 	}
+			// },
 
 			{
 				"scope": "variable.other.property", // Property
 				"settings": {
-					"foreground": "#2aa198"
+					"foreground": "#268bd2" // Violet
 				}
 			},
 
@@ -461,14 +472,14 @@
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
 		"type": "#6c71c4",
-		"parameter": "#d33682",
-		"property": "#2aa198",
-		"function": "#268bd2",
-		"method": "#268bd2",
-		"*.defaultLibrary": "#cb4b16",
-		// "variable.defaultLibrary": "#cb4b16", // Global constants (i.e. math)
-		// "function.defaultLibrary": "#cb4b16", // Functions on global constants (i.e. math.noise)
-		// "method.defaultLibrary": "#cb4b16", // Methods on global constants (i.e. game:GetService())
-		// "class.defaultLibrary": "#cb4b16", // UserData constants (CFrame, Vector3, Instance, etc)
+		"parameter": "#2aa198",
+		"property": "#268bd2",
+		"function": "#cb4b16",
+		"method": "#cb4b16",
+		"*.defaultLibrary": "#d33682",
+		"method.defaultLibrary": { "foreground": "#b58900", "fontStyle": "bold" }, // Methods on global constants (i.e. game:GetService())
+		// "variable.defaultLibrary": "#d33682", // Global constants (i.e. math)
+		// "function.defaultLibrary": "#d33682", // Functions on global constants (i.e. math.noise)
+		// "class.defaultLibrary": "#d33682", // UserData constants (CFrame, Vector3, Instance, etc)
 	}
 }
