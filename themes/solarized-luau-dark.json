@@ -135,6 +135,7 @@
 					"constant.language", // Global constants (i.e. game)
 					"support.constant", // Some global constants (i.e. math)
 					"support.function", // Global functions (i.e. typeof())
+					"variable.other.enummember", // Enum members
 				],
 				"settings": {
 					"foreground": "#d33682" // Magenta
@@ -480,6 +481,8 @@
 		"property": "#268bd2",
 		"function": "#cb4b16",
 		"method": "#cb4b16",
+		"enum": "#d33682",
+		"enumMember": "#d33682",
 		"*.defaultLibrary": "#d33682",
 		//"method.defaultLibrary": "#d33682", // Methods on global constants (i.e. game:GetService())
 		// "variable.defaultLibrary": "#d33682", // Global constants (i.e. math)
