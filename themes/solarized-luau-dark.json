@@ -106,26 +106,26 @@
 			{  
 				"scope": "string", // Strings
 				"settings": {
-					"foreground": "#859900" // Green
+					"foreground": "#859900", // Green
 				}
 			},
 			{
 				"scope": "constant.numeric", // Numbers
 				"settings": {
-					"foreground": "#b58900" // Yellow
-					// "fontStyle": "bold" // Bold for light theme
+					"foreground": "#b58900", // Yellow
+					"fontStyle": "" // Bold for light theme
 				}
 			},
 			{ 
 				"scope": "constant.language.boolean", // Booleans
 				"settings": {
-					"foreground": "#cb4b16" // Orange
+					"foreground": "#cb4b16", // Orange
 				}
 			},
 			{ 
 				"scope": "constant.language.nil", // nil
 				"settings": {
-					"foreground": "#cb4b16" // Orange
+					"foreground": "#cb4b16", // Orange
 				}
 			},
 
@@ -138,7 +138,7 @@
 					"variable.other.enummember", // Enum members
 				],
 				"settings": {
-					"foreground": "#d33682" // Magenta
+					"foreground": "#268bd2", // Blue
 				}
 			},
 
@@ -152,7 +152,7 @@
 				],
 				"settings": {
 					"foreground": "#b58900", // Yellow
-					// "fontStyle": "bold" // Bold for light theme
+					"fontStyle": "" // Bold for light theme
 				}
 			},
 
@@ -168,7 +168,7 @@
 					"keyword.operator.arithmetic",
 				],
 				"settings": {
-					"foreground": "#839496" // Body (#839496 dark, #657b83 light)
+					"foreground": "#839496", // Body, #839496 Dark, #657b83 Light
 				}
 			},
 
@@ -180,7 +180,6 @@
 				],
 				"settings": {
 					"foreground": "#6c71c4", // Violet
-					"fontStyle": ""
 				}
 			},
 
@@ -188,23 +187,38 @@
 			{
 				"scope": "entity.name.function",
 				"settings": {
-					"foreground": "#cb4b16" // Orange
+					"foreground": "#cb4b16", // Orange
 				}
 			},
-			// {
-			// 	"scope": "variable.parameter",
-			// 	"settings": {
-			// 		"foreground": "#d33682"
-			// 	}
-			// },
 
+			// Vars
 			{
-				"scope": "variable.other.property", // Property
+				"scope": [
+					"variable.language",
+					"variable.other",
+				],
 				"settings": {
-					"foreground": "#268bd2" // Violet
+					"foreground": "#839496", // Body, #839496 Dark, #657b83 Light
+					"fontStyle": "", 
 				}
 			},
 
+			// Properties
+			{
+				"scope": "variable.other.property",
+				"settings": {
+					"foreground": "#93a1a1" // Emphasis, #93a1a1 Dark, #586e75 Light
+				}
+			},
+
+			// Disabled because makes parameter defs in for loops highlighted
+			// without highlighting them in inside the loop
+			// {
+			// 	"scope": "variable.parameter", 
+			// 	"settings": { 
+			// 		"foreground": "#2aa198" // Cyan
+			//  	}
+			// },
 
 
 		{
@@ -212,7 +226,7 @@
 				"meta.preprocessor"
 			],
 			"settings": {
-				"foreground": "#cb4b16" // Orange
+				"foreground": "#cb4b16"
 			}
 		},
 		{
@@ -237,15 +251,6 @@
 			"scope": "string.regexp",
 			"settings": {
 				"foreground": "#dc322f"
-			}
-		},
-		{
-			"scope": [
-				"variable.language",
-				"variable.other"
-			],
-			"settings": {
-				"foreground": "#839496"
 			}
 		},
 		{
@@ -476,17 +481,17 @@
 	],
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
-		"type": "#6c71c4",
-		"parameter": "#2aa198",
-		"property": "#268bd2",
-		"function": "#cb4b16",
-		"method": "#cb4b16",
-		"enum": "#d33682",
-		"enumMember": "#d33682",
-		"*.defaultLibrary": "#d33682",
-		//"method.defaultLibrary": "#d33682", // Methods on global constants (i.e. game:GetService())
-		// "variable.defaultLibrary": "#d33682", // Global constants (i.e. math)
-		// "function.defaultLibrary": "#d33682", // Functions on global constants (i.e. math.noise)
-		// "class.defaultLibrary": "#d33682", // UserData constants (CFrame, Vector3, Instance, etc)
+		"type": "#6c71c4", // Violet
+		"parameter": "#2aa198", // Cyan
+		"property": "#93a1a1", // Emphasis, #93a1a1 Dark, #586e75 Light
+		"function": "#cb4b16", // Orange
+		"method": "#cb4b16", // Orange
+		"enum": "#268bd2", // Blue
+		"enumMember": "#268bd2", // Blue
+		"*.defaultLibrary": "#268bd2", // Blue
+		//"method.defaultLibrary": "#268bd2", // Blue, Methods on global constants (i.e. game:GetService())
+		// "variable.defaultLibrary": "#268bd2", // Blue, Global constants (i.e. math)
+		// "function.defaultLibrary": "#268bd2", // Blue, Functions on global constants (i.e. math.noise)
+		// "class.defaultLibrary": "#268bd2", // Blue, UserData constants (CFrame, Vector3, Instance, etc)
 	}
 }
