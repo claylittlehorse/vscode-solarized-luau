@@ -482,6 +482,7 @@
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
 		"type": "#6c71c4", // Violet
+		"namespace": "#6c71c4", // Violet
 		"parameter": "#2aa198", // Cyan
 		"property": "#93a1a1", // Emphasis, #93a1a1 Dark, #586e75 Light
 		"function": "#cb4b16", // Orange
